@@ -1,0 +1,6 @@
+{
+  "name": "Q-FLEET",
+  "description": "Vehicle-to-Vehicle Energy Sharing Platform with Role-Based Dispatch & Real-Time Map",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
