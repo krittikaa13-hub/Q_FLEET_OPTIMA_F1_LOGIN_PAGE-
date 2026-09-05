@@ -10,6 +10,8 @@ import { LoginTransition } from './components/LoginTransition';
 import { AccessDenied } from './components/AccessDenied';
 import { AuthenticatingScreen } from './components/AuthenticatingScreen';
 import { VehicleVerificationScreen } from './components/VehicleVerificationScreen';
+import { NotificationDrawer } from './components/NotificationDrawer';
+import { NotificationToastContainer } from './components/NotificationToast';
 import { Dp } from './qfleetCore.js';
 
 function normalizePath(rawPath: string): string {
@@ -171,11 +173,15 @@ export default function App() {
       );
     }
     return (
-      <Dp
-        activeRole="admin"
-        currentUser={currentUser}
-        onLogout={handleLogout}
-      />
+      <>
+        <Dp
+          activeRole="admin"
+          currentUser={currentUser}
+          onLogout={handleLogout}
+        />
+        <NotificationDrawer />
+        <NotificationToastContainer />
+      </>
     );
   }
 
@@ -201,11 +207,15 @@ export default function App() {
       );
     }
     return (
-      <Dp
-        activeRole="donor"
-        currentUser={currentUser}
-        onLogout={handleLogout}
-      />
+      <>
+        <Dp
+          activeRole="donor"
+          currentUser={currentUser}
+          onLogout={handleLogout}
+        />
+        <NotificationDrawer />
+        <NotificationToastContainer />
+      </>
     );
   }
 
@@ -231,11 +241,15 @@ export default function App() {
       );
     }
     return (
-      <Dp
-        activeRole="receiver"
-        currentUser={currentUser}
-        onLogout={handleLogout}
-      />
+      <>
+        <Dp
+          activeRole="receiver"
+          currentUser={currentUser}
+          onLogout={handleLogout}
+        />
+        <NotificationDrawer />
+        <NotificationToastContainer />
+      </>
     );
   }
 
